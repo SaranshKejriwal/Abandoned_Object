@@ -24,7 +24,6 @@ int main()
 	int col2[160][160];
 	int sum2[160][160]={0};
 	float avgq2[160][160]={0};
-	int k=0;
 	queue<int>colq2[160][160];
 	int flag=0;
 	clock_t clk=clock()/CLOCKS_PER_SEC;//hold time in seconds b/w excecution and this statement
@@ -39,7 +38,7 @@ int main()
 		
 		
 		count++;
-		cvtColor(img,img,CV_BGR2GRAY);
+		cvtColor(img,img,cv::COLOR_BGR2GRAY);
 		//outp.write(img);
 		diff=img.clone();
 		absdiff(img,img,diff);
